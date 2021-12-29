@@ -9,7 +9,6 @@ public class heap_sort extends sort {
 		for(int i = n / 2; i > 0; i--) {
 			restore_heap_condition(toSort, i, n);
 		}
-		print("", toSort);
 		
 		// heap sort
 		for(int i = n; i >= 2 ; i--) {
