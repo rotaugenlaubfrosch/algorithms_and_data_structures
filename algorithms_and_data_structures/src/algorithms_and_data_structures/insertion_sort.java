@@ -1,9 +1,9 @@
 package algorithms_and_data_structures;
 
-public class insertion_sort {
+public class insertion_sort extends sort {
 
 	public static void main(String[] args) {
-		int[] toSort = { 5, 6, 3, 9, 1, 4, 7, 0, 2, 8 };
+		int[] toSort = getintegers(10);
 
 		// insertion sort
 		int key, j;
@@ -20,8 +20,6 @@ public class insertion_sort {
 		// time complexity: O(n^2)
 		// space complexity: O(1)
 
-		for (int i = 0; i < toSort.length; i++) {
-			System.out.println(toSort[i]);
-		}
+		print("Sorted array:", toSort);
 	}
 }

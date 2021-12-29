@@ -1,9 +1,9 @@
 package algorithms_and_data_structures;
 
-public class selection_sort {
+public class selection_sort extends sort {
 
 	public static void main(String[] args) {
-		int[] toSort = { 5, 6, 3, 9, 1, 4, 7, 0, 2, 8 };
+		int[] toSort = getintegers(10);
 
 		// selection sort
 		int storage;
@@ -24,9 +24,7 @@ public class selection_sort {
 		
 		// time complexity: O(n^2)
 		// space complexity: O(1)
-		
-		for (int i = 0; i < toSort.length; i++) {
-			System.out.println(toSort[i]);
-		}
+
+		print("Sorted array:", toSort);
 	}
 }
