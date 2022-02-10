@@ -1,0 +1,44 @@
+// every pair of non-deg(0) verticies is connected
+// every vertex has even deg
+// O(n)
+
+public boolean Exists_Euler_Cycle() {
+  if(connected()) {
+      for(int i = 0; i < n; i++) {
+        if(degree[i] % 2 != 0) {
+          return false;
+        }
+      }
+      return true;
+    }
+    return false;
+}
+  
+// every pair of non-deg(0) verticies is connected 
+public boolean connected() {
+    
+    if(m == 0) {
+      return true;
+    }
+    
+    int vertex = 0;
+    
+    for(int i = 0; i < n; i++) {
+      if(degree[i] != 0) {
+        vertex = i;
+        break;
+      }
+    }
+    
+    DFS_Initialization();
+    DFS(vertex);
+    
+    for(int i = 0; i < n; i++) {
+      if(visited[i] == false && degree[i] != 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+  
+  
